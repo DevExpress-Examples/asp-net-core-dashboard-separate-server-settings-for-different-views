@@ -16,9 +16,9 @@ This example illustrates how to use separate [DashboardConfigurator](https://do
 
 Dashboard controllers are defined in the [DashboardControllers.cs](./CS/Controllers/DashboardControllers.cs) file.
 
-We use the dependency injection technique to register [Dashboard Configurators](./CS/DashboardConfigurators.cs) in the [Startup.cs](./CS/Startup.cs) file.
+The dependency injection technique is used to register [Dashboard Configurators](./CS/DashboardConfigurators.cs) in the [Startup.cs](./CS/Startup.cs) file.
 
-Note that the Web Dashboard control uses a single cache. The use of separate DashboardConfigurator instances does not create separated caches. Thus, we create a [custom parameter](https://docs.devexpress.com/Dashboard/118651/web-dashboard/general-information/security-considerations#cache-security) to specify a different cache for different controllers/configurators.
+Note that the Web Dashboard control uses a single cache. The use of separate **DashboardConfigurator** instances does not create separated caches. To specify a different cache for different controllers/configurators, you need to create a [custom parameter](https://docs.devexpress.com/Dashboard/118651/web-dashboard/general-information/security-considerations#cache-security).
 
 ## Documentation
 

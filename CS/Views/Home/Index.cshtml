@@ -1,24 +1,4 @@
-
-<script type="text/javascript">
-    function onItemClick(e) {
-        if (e.itemData.text == "Sales Dashboards") {
-            window.location = '@Url.Action("SalesDashboards", "Home")'
-        }
-        else if (e.itemData.text == "Marketing Dashboards") {
-            window.location = '@Url.Action("MarketingDashboards", "Home")'
-        }
-    }
-</script>
-
-@(Html.DevExtreme().Menu()
-    .ID("Menu")
-    .Items(items => {
-        items.Add()
-            .Text("Sales Dashboards")
-            .Icon("images/SalesImage.png");
-        items.Add()
-            .Text("Marketing Dashboards")
-            .Icon("images/MarketingImage.png");
-    })
-    .OnItemClick("onItemClick")
-)
+<ul style="list-style-type: none">
+    <li><a href="@Url.Action("SalesDashboards", "Home")">Sales Dashboards</a></li>
+    <li><a href="@Url.Action("MarketingDashboards", "Home")">Marketing Dashboards</a></li>
+</ul>

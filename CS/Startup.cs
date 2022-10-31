@@ -9,7 +9,7 @@ using Microsoft.Extensions.Hosting;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 
-namespace AspNetCore31Dashboard {
+namespace AspNetCoreDashboard {
     public class Startup {
         public Startup(IConfiguration configuration, IWebHostEnvironment hostingEnvironment) {
             Configuration = configuration;

@@ -4,7 +4,7 @@ using DevExpress.DataAccess;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 
-namespace AspNetCore31Dashboard {
+namespace AspNetCoreDashboard {
     public class SalesDashboardConfigurator : DashboardConfigurator {
         public SalesDashboardConfigurator(IConfiguration configuration, IWebHostEnvironment hostingEnvironment) {
             SetConnectionStringsProvider(new DashboardConnectionStringsProvider(configuration));

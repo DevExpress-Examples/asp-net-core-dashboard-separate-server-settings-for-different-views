@@ -1,6 +1,6 @@
 ﻿using DevExpress.DashboardAspNetCore;
 
-namespace AspNetCore31Dashboard {
+namespace AspNetCoreDashboard {
     public class SalesDashboardController : DashboardController {
         public SalesDashboardController(SalesDashboardConfigurator configrurator) : base(configrurator) {
 

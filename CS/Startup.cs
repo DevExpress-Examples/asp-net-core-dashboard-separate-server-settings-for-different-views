@@ -55,8 +55,8 @@ namespace AspNetCoreDashboard {
 
             app.UseEndpoints(endpoints => {
                 // Maps the dashboard route.
-                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboards_sales", "SalesDashboard");
-                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboards_marketing", "MarketingDashboard");
+                endpoints.MapDashboardRoute("api/dashboards_sales", "SalesDashboard");
+                endpoints.MapDashboardRoute("api/dashboards_marketing", "MarketingDashboard");
 
                 endpoints.MapControllerRoute(
                     name: "default",

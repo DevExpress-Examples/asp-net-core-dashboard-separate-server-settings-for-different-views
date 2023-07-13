@@ -1,4 +1,4 @@
-﻿using DevExpress.DashboardAspNetCore;
+using DevExpress.DashboardAspNetCore;
 
 namespace AspNetCoreDashboard {
     public class SalesDashboardController : DashboardController {

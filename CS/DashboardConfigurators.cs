@@ -9,11 +9,11 @@ namespace AspNetCoreDashboard {
         public SalesDashboardConfigurator(IConfiguration configuration, IWebHostEnvironment hostingEnvironment) {
             SetConnectionStringsProvider(new DashboardConnectionStringsProvider(configuration));
             SetDashboardStorage(new DashboardFileStorage(hostingEnvironment.ContentRootFileProvider.GetFileInfo("App_Data/Sales").PhysicalPath));
-            CustomParameters += SalesDashboardConfigurator_CustomParameters;
+            DataSourceCacheKeyCreated += SalesDashboardConfigurator_DataSourceCacheKeyCreated;
         }
 
-        private void SalesDashboardConfigurator_CustomParameters(object sender, CustomParametersWebEventArgs e) {
-            e.Parameters.Add(new Parameter("CacheParameter", typeof(string), "Sales"));
+        private void SalesDashboardConfigurator_DataSourceCacheKeyCreated(object sender, DataSourceCacheKeyCreatedEventArgs e) {
+            e.Key.CustomData.Add("ViewId" , "Sales");
         }
     }
 
@@ -21,11 +21,11 @@ namespace AspNetCoreDashboard {
         public MarketingDashboardConfigurator(IConfiguration configuration, IWebHostEnvironment hostingEnvironment) {
             SetConnectionStringsProvider(new DashboardConnectionStringsProvider(configuration));
             SetDashboardStorage(new DashboardFileStorage(hostingEnvironment.ContentRootFileProvider.GetFileInfo("App_Data/Marketing").PhysicalPath));
-            CustomParameters += MarketingDashboardConfigurator_CustomParameters;
+            DataSourceCacheKeyCreated += MarketingDashboardConfigurator_DataSourceCacheKeyCreated;
         }
 
-        private void MarketingDashboardConfigurator_CustomParameters(object sender, CustomParametersWebEventArgs e) {
-            e.Parameters.Add(new Parameter("CacheParameter", typeof(string), "Marketing"));
+        private void MarketingDashboardConfigurator_DataSourceCacheKeyCreated(object sender, DataSourceCacheKeyCreatedEventArgs e) {
+            e.Key.CustomData.Add("ViewId" , "Marketing");
         }
     }
 }

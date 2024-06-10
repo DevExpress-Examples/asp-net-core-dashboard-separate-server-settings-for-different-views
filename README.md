@@ -11,7 +11,8 @@ Dashboard controllers are defined in the [DashboardControllers.cs](./CS/Controll
 
 The dependency injection technique is used to register [Dashboard Configurators](./CS/DashboardConfigurators.cs) in the [Startup.cs](./CS/Startup.cs) file.
 
-Note that the Web Dashboard control uses a single cache. The use of separate **DashboardConfigurator** instances does not create separated caches. To specify a different cache for different controllers/configurators, you need to create a [custom parameter](https://docs.devexpress.com/Dashboard/118651/web-dashboard/general-information/security-considerations#cache-security).
+Note that the Web Dashboard control uses a single cache. The use of separate **DashboardConfigurator** instances does not create separated caches. To specify a different cache for different controllers/configurators, add required information to the [CustomData](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.IDataSourceCacheKey.CustomData) field of the cache key in the [DashboardConfigurator.DataSourceCacheKeyCreated](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.DataSourceCacheKeyCreated) event handler.
+
 
 ## Files to Review:
 
